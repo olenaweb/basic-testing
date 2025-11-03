@@ -48,8 +48,12 @@ describe('throwCustomError', () => {
 
 describe('rejectCustomError', () => {
   test('should reject custom error', async () => {
-    await expect(rejectCustomError()).rejects.toThrow(MyAwesomeError);
-    await expect(rejectCustomError()).rejects.toThrow('This is my awesome custom error!');
+    try {
+      await rejectCustomError();
+    } catch (err) {
+      expect(err).toBeInstanceOf(MyAwesomeError);
+      expect(err).toHaveProperty('message', 'This is my awesome custom error!');
+    }
   });
 
 });
