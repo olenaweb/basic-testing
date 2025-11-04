@@ -12,7 +12,15 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest --silent",
-    "test:verbose": "jest",
+    "test:verbose": "jest --verbose",
+    "test1": "jest src/01-simple-tests/index.test.ts --verbose",
+    "test2": "jest src/02-table-tests/index.test.ts --verbose",
+    "test3": "jest src/03-error-handling-async/index.test.ts --verbose",
+    "test4": "jest src/04-test-class/index.test.ts --verbose",
+    "test5": "jest src/05-partial-mocking/index.test.ts --verbose",
+    "test6": "jest src/06-mocking-node-api/index.test.ts --verbose",
+    "test7": "jest src/07-mocking-lib-api/index.test.ts --verbose",
+    "test8": "jest src/08-snapshot-testing/index.test.ts --verbose",
     "build": "tsc"
   },
   "devDependencies": {

@@ -1,5 +1,4 @@
 import { random } from 'lodash';
-
 export class BankAccount {
   private _balance: number;
 
@@ -33,7 +32,6 @@ export class BankAccount {
 
     this.withdraw(amount);
     toAccount.deposit(amount);
-
     return this;
   }
 
